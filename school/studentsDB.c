@@ -58,17 +58,17 @@ STUDENT *loadDB(void)
         
         sscanf(buffer, "%s %d %s %s", matricule_temp, &age_temp, prenom_temp, nom_temp);
         
-        Students[count].matricule = malloc(sizeof(char)*strlen(matricule_temp));
+        Students[count].matricule = malloc(sizeof(char)*strlen(matricule_temp) + 1);
         if (Students[count].matricule == NULL)
         {
             return NULL;
         }
-        Students[count].prenom = malloc(sizeof(char)*strlen(prenom_temp));
+        Students[count].prenom = malloc(sizeof(char)*strlen(prenom_temp) + 1);
         if (Students[count].prenom == NULL)
         {
             return NULL;
         }
-        Students[count].nom = malloc(sizeof(char)*strlen(nom_temp));
+        Students[count].nom = malloc(sizeof(char)*strlen(nom_temp) +1);
         if (Students[count].nom == NULL)
         {
             return NULL;
