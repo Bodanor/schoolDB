@@ -7,8 +7,14 @@
 
 #include <stdio.h>
 
+#include "studentsDB.h"
+
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+    printf("-----STUDENT_DB----\n");
+    STUDENT *students = loadDB();
+    printf("%p", students);
+    
+    getc(stdin);
+    destroyStudents(students);
 }
